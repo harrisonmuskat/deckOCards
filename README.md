@@ -11,3 +11,7 @@ The API routes are behind /api/v1 and allow the user to:
 - return a specific card
 - update a specific card
 - delete a card
+
+## Frontend JS
+
+The front end infrastructure is designed as a SPA using React. Tests are written in Jasmine/Enzyme.
