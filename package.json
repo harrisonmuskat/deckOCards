@@ -1,0 +1,61 @@
+{
+  "name": "deckocards",
+  "version": "1.0.0",
+  "description": "Deck of cards app",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/karma start react/karma.conf.js",
+    "start": "npm run webpack --watch",
+    "webpack": "node_modules/.bin/webpack --config ./react/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrisonmuskat/deckOCards.git"
+  },
+  "keywords": [
+    "deck-of-cards"
+  ],
+  "author": "harrisonmuskat@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrisonmuskat/deckOCards/issues"
+  },
+  "homepage": "https://github.com/harrisonmuskat/deckOCards#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "isparta-loader": "^2.0.0",
+    "jasmine-ajax": "^3.4.0",
+    "jasmine-core": "^3.1.0",
+    "jasmine-enzyme": "^6.0.2",
+    "karma": "^2.0.4",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^3.0.0",
+    "node-sass": "^4.9.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "react-addons-test-utils": "^15.6.2",
+    "redux-devtools": "^3.4.1",
+    "sass-loader": "^7.0.3",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

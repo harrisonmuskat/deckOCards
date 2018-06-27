@@ -45,6 +45,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if ($e instanceof HttpException)
+        {
+            return response()->json([
+                'message' => 'Sorry! Resource not found.'
+            ], 404);
+        }
         return parent::render($request, $e);
     }
 }

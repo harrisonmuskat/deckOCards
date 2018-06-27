@@ -21,6 +21,11 @@ class CardController extends Controller
 
 	public function create(Request $request)
 	{
+		$this->validate($request, [
+			'rank' => 'string|required',
+			'suit' => 'string|in:clubs,hearts,diamonds,spades|nullable'
+		]);
+
 		$card = new Card;
 
 		$card->rank = $request->rank;
@@ -28,14 +33,14 @@ class CardController extends Controller
 
 		$card->save();
 
-		return response()->json($card);
+		return response()->json($card, 201);
 	}
 
 	public function findById($id)
 	{
 		$card = Card::find($id);
 
-		return response()->json($card);
+		return response()->json($card, 200);
 	}
 
 	public function update(Request $request, $id)
