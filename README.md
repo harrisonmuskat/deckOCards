@@ -15,3 +15,11 @@ The API routes are behind /api/v1 and allow the user to:
 ## Frontend JS
 
 The front end infrastructure is designed as a SPA using React. Tests are written in Jasmine/Enzyme.
+
+## Building the JS
+
+Run `npm start` to build the JS. The resulting code is placed in the `/public` directory.
+
+## Running the app
+
+Run `php -S localhost:8000 -t public` to start the server.
