@@ -15,6 +15,12 @@
 //     return $router->app->version();
 // });
 
+// TODO - Add Index Route/View and User Auth for API calls
+
+$router->get('/', function() {
+    return view('index');
+});
+
 $router->group(['prefix' => 'api/v1'], function() use($router) {
     $router->get('/cards', 'CardController@index');
     $router->post('/card', 'CardController@create');
