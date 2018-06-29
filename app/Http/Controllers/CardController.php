@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Card;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class CardController extends Controller
 {
@@ -41,6 +42,13 @@ class CardController extends Controller
 		$card = Card::find($id);
 
 		return response()->json($card, 200);
+	}
+
+	public function findBySuit($suit)
+	{
+		$cards = Card::where('suit', $suit)->get()->toArray();
+		$randomCard = array_rand($cards, 1);
+		return response()->json($cards[$randomCard], 200);
 	}
 
 	public function update(Request $request, $id)

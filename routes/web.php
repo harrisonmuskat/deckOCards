@@ -25,6 +25,7 @@ $router->group(['prefix' => 'api/v1'], function() use($router) {
     $router->get('/cards', 'CardController@index');
     $router->post('/card', 'CardController@create');
     $router->get('/card/{id}', 'CardController@findById');
+    $router->get('/cards/{suit}', 'CardController@findBySuit');
     $router->put('/card/{id}', 'CardController@update');
     $router->delete('card/{id}', 'CardController@destroy');
 });

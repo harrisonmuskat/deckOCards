@@ -19,6 +19,7 @@ class CreateCardsTable extends Migration
             $table->increments('id');
             $table->string('rank');
             $table->string('suit')->nullable();
+            $table->string('img_url')->nullable();
             $table->timestamps();
         });
 
@@ -30,13 +31,15 @@ class CreateCardsTable extends Migration
                 $newCard = new Card();
                 $newCard->suit = $suit;
                 $newCard->rank = $rank;
+                $newCard->img_url = "https://res.cloudinary.com/dymrylaas/image/upload/cards/${rank}_of_${suit}.svg";
                 $newCard->save();
             }
         }
         for ($x = 0; $x < 2; $x++) {
             $joker = new Card();
-            $joker->suit = null;
+            $joker->suit = 'joker';
             $joker->rank = 'joker';
+            $joker->img_url = "https://res.cloudinary.com/dymrylaas/image/upload/cards/red_joker.svg";
             $joker->save();
         }
     }

@@ -32,8 +32,10 @@
     "babel-preset-react": "^6.24.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-materialize": "^2.3.2",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
