@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import {Row, Col} from 'react-materialize';
+import Grid from '@material-ui/core/Grid';
 
 const CardList = props => {
   let cards = props.cards.map(card => {
@@ -11,14 +11,16 @@ const CardList = props => {
 					name={card.suit}
 				/>
     );
-  });
+	});
+	
+	const containerStyle = {
+		paddingTop: '20px',
+	};
 
   return (
-    <Row>
-			<Col s={1} className='edge'></Col>
+    <Grid container justify='center' spacing='16' style={containerStyle}>
 			{cards}
-			<Col s={1} className='edge'></Col>
-    </Row>
+    </Grid>
   );
 };
 
